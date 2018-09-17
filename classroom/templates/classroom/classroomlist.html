@@ -1,0 +1,27 @@
+{% extends 'classroom/base.html' %}
+
+{% block content %}
+ <h1>Classrooms list</h1>
+    {% if courses %}
+        <table class='table table-striped'>
+            <thead class='thead-dark '>
+                <th>ID</th>
+                <th>NAMN</th>
+                <th>SKAPAD</th>
+            </thead>
+            <tbody>
+            {% for course in courses %}
+                <tr>
+                    <td>{{ course.id }}</td> 
+                    <td>{{ course.name }}</td> 
+                    <td>{{ course.creationTime}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h4>Kontot saknar klassrum</h4>
+    {% endif %}
+{% endblock %}
+       
+        

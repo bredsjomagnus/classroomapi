@@ -2,3 +2,4 @@ classroomapi/settings.py
 classroomapi/__pycache__
 courses
 rosters
+db.sqlite3
